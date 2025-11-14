@@ -46,7 +46,7 @@ def draw_tile(x, y):
 def draw_goal(x, y):
     iso_x, iso_y = grid_to_iso(x, y)
     pygame.draw.polygon(screen, (0, 255, 0), [
-        (iso_x, iso_y)
+        (iso_x, iso_y),
         (iso_x + TILE_WIDTH // 2, iso_y + TILE_HEIGHT // 2),
         (iso_x, iso_y + TILE_HEIGHT),
         (iso_x - TILE_WIDTH // 2, iso_y + TILE_HEIGHT // 2)
@@ -138,4 +138,5 @@ while running:
         pygame.time.delay(2000)
         running = False
 pygame.quit()
+
 sys.exit()
